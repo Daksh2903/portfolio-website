@@ -2,63 +2,118 @@
 
 @section('content')
 
-<h1 class="text-center mb-4">My Projects</h1>
+<div class="container py-5">
 
-<div class="row">
+    <h1 class="text-center fw-bold mb-5 text-info">
+        My Projects
+    </h1>
 
-    <!-- Project 1 -->
-    <div class="col-md-6 mb-4">
-        <div class="card shadow">
+    <div class="row g-4">
 
-            <img src="{{ asset('images/projects/portfolio.png') }}"
-                 class="card-img-top"
-                 alt="Portfolio Project">
+        <!-- Project 1 -->
+        <div class="col-md-6" data-aos="fade-up">
 
-            <div class="card-body">
+            <div class="card bg-dark text-white border-0 shadow-lg h-100">
 
-                <h4>Portfolio Website</h4>
+                <img src="{{ asset('Images/projects/portfolio.png') }}"
+                     class="card-img-top"
+                     alt="Portfolio Project">
 
-                <p>
-                    A personal portfolio website built using Laravel to showcase
-                    my projects, skills, and achievements.
-                </p>
+                <div class="card-body">
 
-                <p><strong>Tech Used:</strong> Laravel, HTML, CSS</p>
+                    <h3 class="card-title">
+                        Portfolio Website
+                    </h3>
 
-                <a href="#" class="btn btn-dark">
-                    View GitHub
-                </a>
+                    <p class="card-text text-light">
+                        A modern personal portfolio website built using Laravel
+                        to showcase projects, achievements, and technical skills.
+                    </p>
+
+                    <!-- Tech Badges -->
+                    <div class="mb-3">
+
+                        <span class="badge bg-info text-dark me-2">
+                            Laravel
+                        </span>
+
+                        <span class="badge bg-secondary me-2">
+                            PHP
+                        </span>
+
+                        <span class="badge bg-primary me-2">
+                            Bootstrap
+                        </span>
+
+                    </div>
+
+                    <!-- Buttons -->
+                    <a href="https://github.com/Daksh2903/portfolio-website"
+                       class="btn btn-info me-2"
+                       target="_blank">
+
+                        GitHub
+
+                    </a>
+
+                </div>
 
             </div>
+
         </div>
-    </div>
 
 
-    <!-- Project 2 -->
-    <div class="col-md-6 mb-4">
-        <div class="card shadow">
+        <!-- Project 2 -->
+        <div class="col-md-6" data-aos="zoom-in">
 
-            <img src="{{ asset('images/projects/student-system.png') }}"
-                 class="card-img-top"
-                 alt="Student Management System">
+            <div class="card bg-dark text-white border-0 shadow-lg h-100">
 
-            <div class="card-body">
+                <img src="{{ asset('Images/projects/student-system.png') }}"
+                     class="card-img-top"
+                     alt="Student System">
 
-                <h4>Student Management System</h4>
+                <div class="card-body">
 
-                <p>
-                    A system to manage student records including add,
-                    update, delete, and search operations.
-                </p>
+                    <h3 class="card-title">
+                        Student Management System
+                    </h3>
 
-                <p><strong>Tech Used:</strong> PHP, MySQL</p>
+                    <p class="card-text text-light">
+                        A CRUD-based student management system for handling
+                        student records using PHP and MySQL.
+                    </p>
 
-                <a href="#" class="btn btn-dark">
-                    View GitHub
-                </a>
+                    <!-- Tech Badges -->
+                    <div class="mb-3">
+
+                        <span class="badge bg-warning text-dark me-2">
+                            PHP
+                        </span>
+
+                        <span class="badge bg-success me-2">
+                            MySQL
+                        </span>
+
+                        <span class="badge bg-primary me-2">
+                            Bootstrap
+                        </span>
+
+                    </div>
+
+                    <!-- Buttons -->
+                    <a href="#"
+                       class="btn btn-info me-2">
+
+                        GitHub
+
+                    </a>
+
+                </div>
 
             </div>
+
         </div>
+
     </div>
 
 </div>

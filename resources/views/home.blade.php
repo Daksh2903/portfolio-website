@@ -2,98 +2,87 @@
 
 @section('content')
 
-<div class="row align-items-center mb-5">
+<div class="container-fluid bg-dark text-white min-vh-100 d-flex align-items-center">
 
-    <!-- Left Side Text -->
-    <div class="col-md-6">
+    <div class="container">
 
-        <h1>Hello, I'm Daksh Patel 👋</h1>
+        <div class="row align-items-center">
 
-        <h4 class="text-muted">
-            Computer Science Student | Laravel Developer
-        </h4>
+            <!-- Left Side -->
+            <div class="col-md-6" data-aos="fade-right">
 
-        <p>
-            I am passionate about web development and currently learning Laravel.
-            I enjoy building clean and functional web applications.
-        </p>
+                <h5 class="text-info mb-3">
+                    Welcome To My Portfolio
+                </h5>
 
-        <a href="{{ asset('resume/VAC2.pdf') }}"
-            class="btn btn-primary"
-            download>
-            Download Resume
-        </a>
+                <h1 class="display-3 fw-bold">
+                    Hi, I'm Daksh Patel
+                </h1>
 
-        <a href="/contact" class="btn btn-outline-dark">Contact Me</a>
+                <h2 class="text-info mb-4">
+                    <span id="typing"></span>
+                </h2>
 
-    </div>
+                <p class="lead text-light">
+                    Passionate about building modern web applications
+                    using Laravel, PHP, MySQL, and JavaScript.
+                </p>
 
-    <!-- Right Side Image -->
-    <div class="col-md-6 text-center">
+                <div class="mt-4">
 
-        <img src="{{ asset('images/Profile.jpeg') }}"
-             class="img-fluid rounded-circle"
-             alt="Profile Photo">
+                    <a href="/projects" class="btn btn-info btn-lg me-3">
+                        View Projects
+                    </a>
+
+                    <a href="{{ asset('resume/VAC2.pdf') }}"
+                       class="btn btn-outline-light btn-lg"
+                       download>
+                       Download Resume
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="col-md-6 text-center" data-aos="fade-left">
+
+                <img src="{{ asset('Images/Profile.jpeg') }}"
+                     alt="Profile"
+                     class="img-fluid rounded-circle shadow-lg"
+                     width="350">
+
+            </div>
+
+        </div>
 
     </div>
 
 </div>
 
 
-<!-- Skills Section -->
+<script>
 
-<h2 class="text-center mb-4">My Skills</h2>
+document.addEventListener("DOMContentLoaded", function () {
 
-<div class="row text-center">
+    var typed = new Typed("#typing", {
 
-    <div class="col-md-4 mb-3">
-        <div class="card shadow">
-            <div class="card-body">
-                <h5>HTML</h5>
-            </div>
-        </div>
-    </div>
+        strings: [
+            "Laravel Developer",
+            "Full Stack Developer",
+            "Backend Developer",
+            "PHP Developer"
+        ],
 
-    <div class="col-md-4 mb-3">
-        <div class="card shadow">
-            <div class="card-body">
-                <h5>CSS</h5>
-            </div>
-        </div>
-    </div>
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true
 
-    <div class="col-md-4 mb-3">
-        <div class="card shadow">
-            <div class="card-body">
-                <h5>JavaScript</h5>
-            </div>
-        </div>
-    </div>
+    });
 
-    <div class="col-md-4 mb-3">
-        <div class="card shadow">
-            <div class="card-body">
-                <h5>PHP</h5>
-            </div>
-        </div>
-    </div>
+});
 
-    <div class="col-md-4 mb-3">
-        <div class="card shadow">
-            <div class="card-body">
-                <h5>Laravel</h5>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 mb-3">
-        <div class="card shadow">
-            <div class="card-body">
-                <h5>SQL</h5>
-            </div>
-        </div>
-    </div>
-
-</div>
+</script>
 
 @endsection

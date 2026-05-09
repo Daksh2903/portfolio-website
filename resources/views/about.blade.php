@@ -4,18 +4,20 @@
 
 <h1 class="text-center mb-4">About Me</h1>
 
-<div class="card shadow p-4">
+<div class="card p-5 shadow-lg glass-about">
 
-    <p>
-        Hello! I am <strong>Daksh Patel</strong>, a Computer Science student
-        passionate about web development and learning modern technologies
-        like Laravel and PHP.
-    </p>
+    <p class="text-light fs-5 lh-lg">
 
-    <p>
-        I enjoy building clean, functional, and user-friendly web applications.
-        Currently, I am focusing on improving my backend development skills
-        using Laravel.
+    Hello! I am <span class="text-info fw-bold">Daksh Patel</span>,
+    a Computer Science student passionate about web development
+    and learning modern technologies like Laravel and PHP.
+
+    <br><br>
+
+    I enjoy building clean, functional, and user-friendly web applications.
+    Currently, I am focusing on improving my backend development skills
+    using Laravel.
+
     </p>
 
 </div>
@@ -23,43 +25,90 @@
 
 <!-- Education Section -->
 
-<h2 class="mt-5">Education</h2>
+<h1 class="mt-5 mb-4">
+    Education
+</h1>
 
-<ul class="list-group">
+<div class="card p-4 glass-about shadow-lg">
 
-    <li class="list-group-item">
-        Bachelor of Science in Information Technology (Currently Pursuing)
-    </li>
+    <p class="text-light fs-5 mb-0">
 
-</ul>
+        Bachelor of Science in Information Technology
+        <span class="text-info">
+            (Currently Pursuing)
+        </span>
+
+    </p>
+
+</div>
 
 
 <!-- Skills Section -->
 
-<h2 class="mt-5">Technical Skills</h2>
+<h1 class="mt-5 mb-4">
+    Technical Skills
+</h1>
 
-<ul class="list-group">
+<div class="row g-4">
 
-    <li class="list-group-item">HTML</li>
-    <li class="list-group-item">CSS</li>
-    <li class="list-group-item">JavaScript</li>
-    <li class="list-group-item">PHP</li>
-    <li class="list-group-item">Laravel</li>
-    <li class="list-group-item">MySQL</li>
+    <div class="col-md-4">
+        <div class="card glass-about p-3 text-center">
+            <h5 class="text-info">HTML</h5>
+        </div>
+    </div>
 
-</ul>
+    <div class="col-md-4">
+        <div class="card glass-about p-3 text-center">
+            <h5 class="text-info">CSS</h5>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card glass-about p-3 text-center">
+            <h5 class="text-info">JavaScript</h5>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card glass-about p-3 text-center">
+            <h5 class="text-info">PHP</h5>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card glass-about p-3 text-center">
+            <h5 class="text-info">Laravel</h5>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card glass-about p-3 text-center">
+            <h5 class="text-info">MySQL</h5>
+        </div>
+    </div>
+
+</div>
 
 
 <!-- Career Goal Section -->
 
-<h2 class="mt-5">Career Goal</h2>
+<h1 class="mt-5 mb-4">
+    Career Goal
+</h1>
 
-<div class="card shadow p-4">
+<div class="card p-5 shadow-lg glass-about">
 
-    <p>
-        My goal is to become a skilled full-stack web developer and work on
-        real-world projects that solve practical problems and improve user
-        experiences.
+    <p class="text-light fs-5 lh-lg mb-0">
+
+        My goal is to become a skilled Full Stack Developer
+        and build modern, scalable, and user-friendly web applications.
+
+        <br><br>
+
+        I am continuously improving my backend development skills
+        using Laravel, PHP, and MySQL while also exploring modern
+        frontend technologies.
+
     </p>
 
 </div>
