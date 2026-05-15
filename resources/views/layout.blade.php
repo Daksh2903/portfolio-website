@@ -168,7 +168,7 @@
                 <li class="nav-item">
                     <a class="nav-link px-3 {{ request()->is('achievements') ? 'active text-info fw-bold' : '' }}"
                        href="/achievements">
-                       Achievements
+                       Achievements    
                     </a>
                 </li>
 
@@ -178,6 +178,21 @@
                        Contact
                     </a>
                 </li>
+
+                @auth
+
+                <li class="nav-item">
+
+                    <a class="nav-link px-3 text-warning fw-bold"
+                        href="/dashboard">
+
+                        Admin
+
+                    </a>
+
+                </li>
+
+                @endauth
 
             </ul>
 

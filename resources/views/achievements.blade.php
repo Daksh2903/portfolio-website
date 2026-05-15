@@ -2,46 +2,63 @@
 
 @section('content')
 
-<h1 class="text-center mb-4">My Achievements</h1>
+<div class="container py-5">
 
-<div class="row">
+    <h1 class="text-center text-info fw-bold mb-5">
+        Achievements
+    </h1>
 
-    <!-- Achievement 1 -->
-    <div class="col-md-6 mb-4">
+    <div class="row g-4">
 
-        <div class="card shadow">
+        <!-- Achievement 1 -->
+        <div class="col-md-6" data-aos="fade-up">
 
-            <div class="card-body">
+            <div class="card glass-about p-5 shadow-lg h-100">
 
-                <h4>Scetathon Competition Selection</h4>
+                <h3 class="text-info mb-4">
+                    Scetathon Finalist
+                </h3>
 
-                <p>
-                    Selected for the advanced round of the Scetathon competition
-                    out of 130+ participating teams at Sarvajanik College of
-                    Engineering & Technology (SCET).
+                <p class="text-light fs-5 lh-lg">
+
+                    Selected among 130+ teams in the
+                    Scetathon competition organized by
+                    SCET College.
+
+                    <br><br>
+
+                    Successfully advanced to the
+                    intensive 24-hour development round
+                    with my team GreenNode.
+
                 </p>
-
-                <p><strong>Category:</strong> Hackathon Competition</p>
 
             </div>
 
         </div>
 
-    </div>
 
+        <!-- Achievement 2 -->
+        <div class="col-md-6" data-aos="zoom-in">
 
-    <!-- Achievement 2 (Future placeholder) -->
-    <div class="col-md-6 mb-4">
+            <div class="card glass-about p-5 shadow-lg h-100">
 
-        <div class="card shadow">
+                <h3 class="text-info mb-4">
+                    Laravel Portfolio Project
+                </h3>
 
-            <div class="card-body">
+                <p class="text-light fs-5 lh-lg">
 
-                <h4>More Achievements Coming Soon</h4>
+                    Designed and developed a modern
+                    full-stack portfolio website using
+                    Laravel, Bootstrap, MySQL, and GitHub.
 
-                <p>
-                    I am continuously working on improving my technical skills
-                    and participating in competitions and certifications.
+                    <br><br>
+
+                    Implemented authentication,
+                    database integration, animations,
+                    and responsive modern UI design.
+
                 </p>
 
             </div>
