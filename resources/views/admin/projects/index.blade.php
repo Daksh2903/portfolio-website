@@ -44,13 +44,32 @@
 
                 </p>
 
-                <a href="{{ $project->github_link }}"
-                   target="_blank"
-                   class="btn btn-info mt-3">
+                <div class="mt-3 d-flex gap-2">
 
-                    GitHub
+                    <a href="{{ $project->github_link }}"
+                        target="_blank"
+                        class="btn btn-info">
 
-                </a>
+                            GitHub
+
+                    </a>
+
+                    <form action="/admin/projects/delete/{{ $project->id }}"
+                        method="POST">
+
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit"
+                                class="btn btn-danger">
+
+                            Delete
+
+                        </button>
+
+                    </form>
+
+                </div>
 
             </div>
 

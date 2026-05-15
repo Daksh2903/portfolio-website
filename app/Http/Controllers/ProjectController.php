@@ -45,4 +45,16 @@ class ProjectController extends Controller
 
     }
 
+    public function destroy($id)
+    {
+
+        $project = Project::findOrFail($id);
+
+        $project->delete();
+
+        return redirect('/admin/projects')
+            ->with('success', 'Project Deleted Successfully');
+
+    }
+
 }

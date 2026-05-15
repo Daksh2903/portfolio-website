@@ -58,6 +58,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/projects/create', [ProjectController::class, 'create']);
 
     Route::post('/admin/projects/store', [ProjectController::class, 'store']);
+
+    Route::delete('/admin/projects/delete/{id}', [ProjectController::class, 'destroy']);
 });
 
 
