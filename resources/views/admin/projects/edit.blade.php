@@ -5,16 +5,16 @@
 <div class="container py-5">
 
     <h1 class="text-info fw-bold mb-5">
-        Add New Project
+        Edit Project
     </h1>
 
     <div class="card glass-about p-5 shadow-lg">
 
-        <form action="/admin/projects/store"
-            method="POST"
-            enctype="multipart/form-data">
+        <form action="{{ route('projects.update', $project->id) }}"
+              method="POST">
 
             @csrf
+            @method('PUT')
 
             <!-- Title -->
             <div class="mb-4">
@@ -26,6 +26,7 @@
                 <input type="text"
                        name="title"
                        class="form-control"
+                       value="{{ $project->title }}"
                        required>
 
             </div>
@@ -41,7 +42,7 @@
                 <textarea name="description"
                           rows="5"
                           class="form-control"
-                          required></textarea>
+                          required>{{ $project->description }}</textarea>
 
             </div>
 
@@ -56,12 +57,12 @@
                 <input type="text"
                        name="technologies"
                        class="form-control"
-                       placeholder="Laravel, PHP, MySQL">
+                       value="{{ $project->technologies }}">
 
             </div>
 
 
-            <!-- GitHub Link -->
+            <!-- GitHub -->
             <div class="mb-4">
 
                 <label class="form-label text-light">
@@ -70,28 +71,16 @@
 
                 <input type="text"
                        name="github_link"
-                       class="form-control">
+                       class="form-control"
+                       value="{{ $project->github_link }}">
 
             </div>
 
-            <!-- Project Image -->
-            <div class="mb-4">
 
-                <label class="form-label text-light">
-                    Project Image
-                </label>
-
-                <input type="file"
-                    name="image"
-                    class="form-control">
-
-            </div>
-            
-            <!-- Submit -->
             <button type="submit"
                     class="btn btn-info">
 
-                Add Project
+                Update Project
 
             </button>
 

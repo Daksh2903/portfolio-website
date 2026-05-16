@@ -28,6 +28,14 @@
 
             <div class="card glass-about p-4 shadow-lg h-100">
 
+                @if($project->image)
+
+                <img src="{{ asset('uploads/projects/' . $project->image) }}"
+                    class="img-fluid rounded mb-3"
+                    alt="Project Image">
+
+                @endif
+                
                 <h3 class="text-info mb-3">
                     {{ $project->title }}
                 </h3>
@@ -45,6 +53,13 @@
                 </p>
 
                 <div class="mt-3 d-flex gap-2">
+
+                    <a href="{{ route('projects.edit', $project->id) }}"
+                        class="btn btn-warning">
+
+                        Edit
+
+                    </a>
 
                     <a href="{{ $project->github_link }}"
                         target="_blank"

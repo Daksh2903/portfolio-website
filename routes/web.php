@@ -60,6 +60,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/projects/store', [ProjectController::class, 'store']);
 
     Route::delete('/admin/projects/delete/{id}', [ProjectController::class, 'destroy']);
+
+    Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
+
+    Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
+
 });
 
 
