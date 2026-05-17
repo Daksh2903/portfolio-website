@@ -1,38 +1,89 @@
-@extends('layout')
+@extends('admin.layout')
 
 @section('content')
 
-<h1 class="text-center mb-4">Contact Messages</h1>
+<h1 class="text-info fw-bold mb-5">
+    Contact Messages
+</h1>
 
-<div class="card shadow p-4">
 
-<table class="table table-bordered">
+@if(session('success'))
 
-    <thead class="table-dark">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Date</th>
-        </tr>
-    </thead>
+<div class="alert alert-success">
 
-    <tbody>
+    {{ session('success') }}
 
-        @foreach($messages as $msg)
+</div>
 
-        <tr>
-            <td>{{ $msg->name }}</td>
-            <td>{{ $msg->email }}</td>
-            <td>{{ $msg->message }}</td>
-            <td>{{ $msg->created_at->format('d M Y') }}</td>
-        </tr>
+@endif
 
-        @endforeach
 
-    </tbody>
+<div class="card glass-about p-4 shadow-lg border-0">
 
-</table>
+    <div class="table-responsive">
+
+        <table class="table table-dark table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Message</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach($messages as $message)
+
+                <tr>
+
+                    <td>{{ $message->id }}</td>
+
+                    <td>{{ $message->name }}</td>
+
+                    <td>{{ $message->email }}</td>
+
+                    <td>{{ $message->message }}</td>
+
+                    <td>
+
+                        <form action="/messages/delete/{{ $message->id }}"
+                              method="POST">
+
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit"
+                                    class="btn btn-danger btn-sm">
+
+                                Delete
+
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+                @endforeach
+
+            </tbody>
+
+        </table>
+
+    </div>
 
 </div>
 

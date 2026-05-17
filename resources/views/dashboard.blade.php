@@ -1,94 +1,80 @@
-@extends('layout')
+@extends('admin.layout')
 
 @section('content')
 
-<div class="container py-5">
+<h1 class="text-info fw-bold mb-5">
+    Admin Dashboard
+</h1>
 
-    <h1 class="text-info fw-bold mb-5">
-        Admin Dashboard
-    </h1>
+<div class="row g-4">
 
-    <div class="row g-4">
+    <!-- Total Projects -->
+    <div class="col-md-6">
 
-        <!-- Messages -->
-        <div class="col-md-4" data-aos="fade-up">
+        <div class="card glass-about p-5 shadow-lg border-0">
 
-            <div class="card glass-about p-4 shadow-lg text-center h-100">
+            <h5 class="text-secondary mb-3">
+                Total Projects
+            </h5>
 
-                <h3 class="text-info mb-3">
-                    Messages
-                </h3>
-
-                <p class="text-light mb-4">
-
-                    Manage contact form submissions.
-
-                </p>
-
-                <a href="/messages"
-                   class="btn btn-info">
-
-                    Open
-
-                </a>
-
-            </div>
+            <h1 class="text-info fw-bold">
+                {{ $totalProjects }}
+            </h1>
 
         </div>
 
+    </div>
 
-        <!-- Projects -->
-        <div class="col-md-4" data-aos="zoom-in">
 
-            <div class="card glass-about p-4 shadow-lg text-center h-100">
+    <!-- Total Messages -->
+    <div class="col-md-6">
 
-                <h3 class="text-info mb-3">
-                    Projects
-                </h3>
+        <div class="card glass-about p-5 shadow-lg border-0">
 
-                <p class="text-light mb-4">
+            <h5 class="text-secondary mb-3">
+                Total Messages
+            </h5>
 
-                    Manage portfolio projects.
-
-                </p>
-
-                <a href="#"
-                   class="btn btn-info">
-
-                    Coming Soon
-
-                </a>
-
-            </div>
+            <h1 class="text-info fw-bold">
+                {{ $totalMessages }}
+            </h1>
 
         </div>
 
+    </div>
 
-        <!-- Achievements -->
-        <div class="col-md-4" data-aos="fade-left">
+</div>
 
-            <div class="card glass-about p-4 shadow-lg text-center h-100">
 
-                <h3 class="text-info mb-3">
-                    Achievements
-                </h3>
+<!-- Quick Actions -->
+<div class="mt-5">
 
-                <p class="text-light mb-4">
+    <h2 class="text-info mb-4">
+        Quick Actions
+    </h2>
 
-                    Manage achievements section.
+    <div class="d-flex gap-3 flex-wrap">
 
-                </p>
+        <a href="/admin/projects/create"
+           class="btn btn-info">
 
-                <a href="#"
-                   class="btn btn-info">
+            Add Project
 
-                    Coming Soon
+        </a>
 
-                </a>
+        <a href="/admin/projects"
+           class="btn btn-warning">
 
-            </div>
+            Manage Projects
 
-        </div>
+        </a>
+
+        <a href="/messages"
+           class="btn btn-success">
+
+            View Messages
+
+        </a>
 
     </div>
 

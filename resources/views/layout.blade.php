@@ -16,6 +16,12 @@
     <!-- Custom CSS -->
      <style>
 
+    html{
+
+    scroll-behavior: smooth;
+
+    }
+
     body{
         background: linear-gradient(
             135deg,
@@ -153,28 +159,28 @@
 
                 <li class="nav-item">
                     <a class="nav-link px-3 {{ request()->is('about') ? 'active text-info fw-bold' : '' }}"
-                       href="/about">
+                       href="#about">
                        About
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link px-3 {{ request()->is('projects') ? 'active text-info fw-bold' : '' }}"
-                       href="/projects">
+                       href="#projects">
                        Projects
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link px-3 {{ request()->is('achievements') ? 'active text-info fw-bold' : '' }}"
-                       href="/achievements">
+                       href="#achievements">
                        Achievements    
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link px-3 {{ request()->is('contact') ? 'active text-info fw-bold' : '' }}"
-                       href="/contact">
+                       href="#contact">
                        Contact
                     </a>
                 </li>

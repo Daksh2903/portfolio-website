@@ -2,16 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Achievement;
 
 class PortfolioController extends Controller
 {
     public function home()
     {
-        return view('home');
-    }
 
+        $projects = Project::latest()->get();
+
+        $achievements = Achievement::latest()->get();
+
+        return view('home', compact(
+            'projects',
+            'achievements'
+        ));
+
+    }
+    
     public function about()
     {
         return view('about');
@@ -19,12 +30,21 @@ class PortfolioController extends Controller
 
     public function projects()
     {
-        return view('projects');
+
+        $projects = Project::latest()->get();
+
+        return view('projects', compact('projects'));
+
     }
 
     public function achievements()
     {
-        return view('achievements');
+
+        $achievements = Achievement::latest()->get();
+
+        return view('achievements',
+            compact('achievements'));
+
     }
 
     public function contact()
@@ -49,4 +69,17 @@ class PortfolioController extends Controller
 
         return view('messages', compact('messages'));
     }
+
+    public function deleteMessage($id)
+    {
+
+        $message = Contact::findOrFail($id);
+
+        $message->delete();
+
+        return redirect('/messages')
+            ->with('success', 'Message Deleted Successfully');
+
+    }
+
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AchievementController;
 
 
 /*
@@ -28,6 +29,10 @@ Route::post('/contact', [PortfolioController::class, 'submitContact']);
 
 Route::get('/messages', [PortfolioController::class, 'messages'])->middleware('auth');
 
+Route::delete('/messages/delete/{id}',
+    [PortfolioController::class, 'deleteMessage'])
+    ->middleware('auth');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,9 +41,17 @@ Route::get('/messages', [PortfolioController::class, 'messages'])->middleware('a
 */
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
+    $totalProjects = \App\Models\Project::count();
+
+    $totalMessages = \App\Models\Contact::count();
+
+    return view('dashboard', compact(
+        'totalProjects',
+        'totalMessages'
+    ));
+
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +77,26 @@ Route::middleware('auth')->group(function () {
     Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
 
     Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
+
+    // Achievement Routes
+
+    Route::get('/admin/achievements',
+        [AchievementController::class, 'index']);
+
+    Route::get('/admin/achievements/create',
+        [AchievementController::class, 'create']);
+
+    Route::post('/admin/achievements/store',
+        [AchievementController::class, 'store']);
+
+    Route::get('/admin/achievements/edit/{id}',
+        [AchievementController::class, 'edit']);
+
+    Route::put('/admin/achievements/update/{id}',
+        [AchievementController::class, 'update']);
+
+    Route::delete('/admin/achievements/delete/{id}',
+        [AchievementController::class, 'destroy']);
 
 });
 
