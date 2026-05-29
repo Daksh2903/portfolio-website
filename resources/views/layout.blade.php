@@ -16,6 +16,28 @@
     <!-- Custom CSS -->
      <style>
 
+        .profile-image{
+
+            animation: float 4s ease-in-out infinite;
+
+        }
+
+        @keyframes float{
+
+            0%{
+                transform: translateY(0px);
+            }
+
+            50%{
+                transform: translateY(-15px);
+            }
+
+            100%{
+                transform: translateY(0px);
+            }
+
+        }
+
     html{
 
     scroll-behavior: smooth;
@@ -120,6 +142,94 @@
         color: #38bdf8 !important;
     }
 
+    .timeline{
+
+        position: relative;
+
+        margin: 0 auto;
+
+        max-width: 800px;
+
+    }
+
+    .timeline::before{
+
+        content: '';
+
+        position: absolute;
+
+        left: 20px;
+
+        top: 0;
+
+        width: 3px;
+
+        height: 100%;
+
+        background: #38bdf8;
+
+    }
+
+    .timeline-item{
+
+        position: relative;
+
+        padding-left: 60px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .timeline-dot{
+
+        position: absolute;
+
+        left: 10px;
+
+        top: 5px;
+
+        width: 20px;
+
+        height: 20px;
+
+        background: #38bdf8;
+
+        border-radius: 50%;
+
+        box-shadow: 0 0 15px #38bdf8;
+
+    }
+
+    .skill-card{
+
+        background: rgba(255,255,255,0.05);
+
+        backdrop-filter: blur(10px);
+
+        border: 1px solid rgba(255,255,255,0.1);
+
+        border-radius: 15px;
+
+        transition: all 0.4s ease;
+
+    }
+
+    .skill-card:hover{
+
+        transform: translateY(-8px);
+
+        box-shadow: 0 0 20px rgba(56,189,248,0.4);
+
+    }
+
+    .skill-icon{
+
+        font-size: 40px;
+
+        color: #38bdf8;
+
+    }
+
     </style>
 </head>
 
@@ -161,6 +271,18 @@
                     <a class="nav-link px-3 {{ request()->is('about') ? 'active text-info fw-bold' : '' }}"
                        href="#about">
                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#journey">
+                        Journey
                     </a>
                 </li>
 

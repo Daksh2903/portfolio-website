@@ -28,6 +28,52 @@
                     using Laravel, PHP, MySQL, and JavaScript.
                 </p>
 
+                <div class="row mt-4 g-3">
+
+                    <div class="col-4">
+
+                        <div class="card bg-dark border-info text-center p-3">
+
+                            <h3 class="text-info fw-bold">
+                                5+
+                            </h3>
+
+                            <small>Projects</small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+
+                        <div class="card bg-dark border-info text-center p-3">
+
+                            <h3 class="text-info fw-bold">
+                                6+
+                            </h3>
+
+                            <small>Technologies</small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+
+                        <div class="card bg-dark border-info text-center p-3">
+
+                            <h3 class="text-info fw-bold">
+                                1+
+                            </h3>
+
+                            <small>Hackathons</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
                 <div class="mt-4">
 
                     <a href="#projects" class="btn btn-info btn-lg me-3">
@@ -50,7 +96,7 @@
 
                 <img src="{{ asset('Images/Profile.jpeg') }}"
                      alt="Profile"
-                     class="img-fluid rounded-circle shadow-lg"
+                     class="img-fluid rounded-circle shadow-lg profile-image"
                      width="350">
 
             </div>
@@ -88,6 +134,188 @@
                 MySQL, JavaScript, and modern UI design.
 
             </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+
+    <div class="container">
+
+        <h1 class="text-center text-info fw-bold mb-5">
+            My Skills
+        </h1>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="skill-card p-4 text-center">
+
+                    <i class="fab fa-laravel skill-icon mb-3"></i>
+
+                    <h4>Laravel</h4>
+
+                    <p class="text-light">
+                        Backend development and CRUD applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card p-4 text-center">
+
+                    <i class="fab fa-php skill-icon mb-3"></i>
+
+                    <h4>PHP</h4>
+
+                    <p class="text-light">
+                        Server-side programming and web applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card p-4 text-center">
+
+                    <i class="fas fa-database skill-icon mb-3"></i>
+
+                    <h4>MySQL</h4>
+
+                    <p class="text-light">
+                        Database design and management.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card p-4 text-center">
+
+                    <i class="fab fa-js skill-icon mb-3"></i>
+
+                    <h4>JavaScript</h4>
+
+                    <p class="text-light">
+                        Interactive and dynamic user interfaces.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card p-4 text-center">
+
+                    <i class="fab fa-bootstrap skill-icon mb-3"></i>
+
+                    <h4>Bootstrap</h4>
+
+                    <p class="text-light">
+                        Responsive and modern UI design.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="skill-card p-4 text-center">
+
+                    <i class="fab fa-github skill-icon mb-3"></i>
+
+                    <h4>Git & GitHub</h4>
+
+                    <p class="text-light">
+                        Version control and collaboration.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Timeline Section -->
+<section id="journey" class="py-5">
+
+    <div class="container">
+
+        <h1 class="text-center text-info fw-bold mb-5">
+            My Journey
+        </h1>
+
+        <div class="card glass-about p-5 shadow-lg">
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4 class="text-info">2024</h4>
+
+                    <p class="text-light">
+                        Started learning Web Development and programming fundamentals.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4 class="text-info">2025</h4>
+
+                    <p class="text-light">
+                        Learned PHP, MySQL, Bootstrap and started building projects.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4 class="text-info">2026</h4>
+
+                    <p class="text-light">
+                        Built a dynamic Laravel Portfolio CMS with Admin Dashboard, CRUD and Image Uploads.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <h4 class="text-info">2026</h4>
+
+                    <p class="text-light">
+                        Participated in Scetathon and advanced from 130+ teams to the next round.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
