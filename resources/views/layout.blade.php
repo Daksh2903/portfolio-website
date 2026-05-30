@@ -230,6 +230,56 @@
 
     }
 
+    .project-card{
+
+        background: rgba(255,255,255,0.05);
+
+        backdrop-filter: blur(12px);
+
+        border: 1px solid rgba(255,255,255,0.1);
+
+        border-radius: 20px;
+
+        overflow: hidden;
+
+        transition: all 0.4s ease;
+
+    }
+
+    .project-card:hover{
+
+        transform: translateY(-10px);
+
+        box-shadow: 0 0 25px rgba(56,189,248,0.4);
+
+    }
+
+    .project-card img{
+
+        width: 100%;
+
+        height: 180px;
+
+        object-fit: cover;
+
+        border-radius: 15px 15px 0 0;
+
+    }
+
+    .project-card:hover img{
+
+        transform: scale(1.05);
+
+    }
+
+    .tech-badge{
+
+        margin-right: 5px;
+
+        margin-bottom: 5px;
+
+    }
+
     </style>
 </head>
 

@@ -326,57 +326,55 @@
 <!-- Projects Section -->
 <section id="projects" class="py-5">
 
-    <div class="container">
+    <div class="container-lg">
 
         <h1 class="text-center text-info fw-bold mb-5">
             My Projects
         </h1>
 
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
 
             @foreach($projects as $project)
 
-            <div class="col-md-6" data-aos="fade-up">
+            <div class="col-lg-5 col-md-8" data-aos="fade-up">
 
-                <div class="card glass-about p-4 shadow-lg h-100">
+                <div class="project-card h-100">
 
                     @if($project->image)
 
                     <img src="{{ asset('uploads/projects/' . $project->image) }}"
-                         class="img-fluid rounded mb-4"
-                         alt="Project Image">
+                        alt="Project Image">
 
                     @endif
 
-                    <h3 class="text-info mb-3">
-                        {{ $project->title }}
-                    </h3>
+                    <div class="p-4">
 
-                    <p class="text-light">
-                        {{ $project->description }}
-                    </p>
+                        <h3 class="text-info mb-3">
+                            {{ $project->title }}
+                        </h3>
 
-                    <div class="mb-3">
+                        <p class="text-light">
+                            {{ $project->description }}
+                        </p>
 
-                        <span class="badge bg-info text-dark">
+                        <div class="mb-3">
 
-                            {{ $project->technologies }}
+                            <span class="badge bg-info text-dark">
+                                {{ $project->technologies }}
+                            </span>
 
-                        </span>
+                        </div>
+
+                        <a href="{{ $project->github_link }}"
+                        target="_blank"
+                        class="btn btn-info">
+
+                            <i class="fab fa-github me-2"></i>
+                            GitHub
+
+                        </a>
 
                     </div>
-
-                    @if($project->github_link)
-
-                    <a href="{{ $project->github_link }}"
-                       target="_blank"
-                       class="btn btn-info">
-
-                        GitHub
-
-                    </a>
-
-                    @endif
 
                 </div>
 
