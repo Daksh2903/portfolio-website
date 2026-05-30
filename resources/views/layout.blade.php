@@ -280,6 +280,95 @@
 
     }
 
+    .achievement-card{
+
+        background: rgba(255,255,255,0.05);
+
+        backdrop-filter: blur(10px);
+
+        border: 1px solid rgba(255,255,255,0.1);
+
+        border-radius: 20px;
+
+        transition: all 0.4s ease;
+
+    }
+
+    .achievement-card:hover{
+
+        transform: translateY(-10px);
+
+        box-shadow: 0 0 25px rgba(56,189,248,0.4);
+
+    }
+
+    .achievement-icon{
+
+        font-size: 50px;
+
+        color: #38bdf8;
+
+    }
+
+    @media (max-width: 768px){
+
+        .profile-image{
+
+            width: 220px !important;
+
+        }
+
+        .hero-buttons{
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+        }
+
+        .hero-stats h3{
+
+            font-size: 1.4rem;
+
+        }
+
+        .glass-about{
+
+            padding: 25px !important;
+
+        }
+
+        .display-3{
+
+            font-size: 2rem !important;
+
+        }
+
+        .btn-lg{
+
+            padding: 10px 20px;
+
+            font-size: 1rem;
+
+        }
+
+        .min-vh-100{
+
+            min-height: auto !important;
+
+            padding-top: 40px;
+
+            padding-bottom: 40px;
+
+        }
+
+        .card{
+            padding: 0.75rem !important;
+        }
+    }
+
     </style>
 </head>
 

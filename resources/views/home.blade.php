@@ -9,7 +9,7 @@
         <div class="row align-items-center">
 
             <!-- Left Side -->
-            <div class="col-md-6" data-aos="fade-right">
+            <div class="col-md-6 order-2 order-md-1" data-aos="fade-right">
 
                 <h5 class="text-info mb-3">
                     Welcome To My Portfolio
@@ -28,15 +28,15 @@
                     using Laravel, PHP, MySQL, and JavaScript.
                 </p>
 
-                <div class="row mt-4 g-3">
+                <div class="row mt-4 g-3 hero-stats">
 
                     <div class="col-4">
 
                         <div class="card bg-dark border-info text-center p-3">
 
-                            <h3 class="text-info fw-bold">
+                            <h4 class="text-info fw-bold">
                                 5+
-                            </h3>
+                            </h4>
 
                             <small>Projects</small>
 
@@ -74,9 +74,9 @@
 
                 </div>
 
-                <div class="mt-4">
+                <div class="mt-4 hero-buttons">
 
-                    <a href="#projects" class="btn btn-info btn-lg me-3">
+                    <a href="#projects" class="btn btn-info btn-lg ">
                         View Projects
                     </a>
 
@@ -92,7 +92,7 @@
 
 
             <!-- Right Side -->
-            <div class="col-md-6 text-center" data-aos="fade-left">
+            <div class="col-md-6 text-center order-1 order-md-2" data-aos="fade-left">
 
                 <img src="{{ asset('Images/Profile.jpeg') }}"
                      alt="Profile"
@@ -401,11 +401,14 @@
 
             @foreach($achievements as $achievement)
 
-            <div class="col-md-6" data-aos="zoom-in">
+            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
 
-                <div class="card glass-about p-5 shadow-lg h-100">
+                <div class="achievement-card p-5 text-center h-100">
+
+                    <i class="fas fa-trophy achievement-icon mb-4"></i>
 
                     <h3 class="text-info mb-4">
+                        
                         {{ $achievement->title }}
                     </h3>
 
