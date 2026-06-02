@@ -22,20 +22,20 @@
 
     @foreach($achievements as $achievement)
 
-    <div class="col-md-6">
+    <div class="col-md-6 d-flex">
 
-        <div class="card glass-about p-4 shadow-lg border-0 h-100">
+        <div class="card glass-about p-4 shadow-lg border-0 h-100 w-100 d-flex flex-column">
 
             <h3 class="text-info mb-3">
                 {{ $achievement->title }}
             </h3>
 
-            <p class="text-light">
+            <p class="text-white flex-grow-1">
                 {{ $achievement->description }}
             </p>
 
 
-            <div class="mt-3 d-flex gap-2">
+            <div class="mt-auto pt-3 d-flex gap-2">
 
                 <!-- Edit -->
                 <a href="/admin/achievements/edit/{{ $achievement->id }}"

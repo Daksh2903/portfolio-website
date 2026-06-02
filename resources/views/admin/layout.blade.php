@@ -69,6 +69,30 @@
             padding: 40px;
         }
 
+        .glass-about{
+
+            background: rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 20px;
+
+        }
+
+        .card{
+
+            transition: all 0.3s ease;
+
+        }
+
+        .card:hover{
+
+            transform: translateY(-5px);
+
+        }
+
     </style>
 
 </head>
@@ -90,6 +114,11 @@
         <a href="/admin/projects">
             <i class="fas fa-folder me-2"></i>
             Projects
+        </a>
+
+        <a href="/admin/achievements">
+            <i class="fas fa-trophy me-2"></i>
+            Achievements
         </a>
 
         <a href="/messages">

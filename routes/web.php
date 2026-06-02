@@ -46,13 +46,15 @@ Route::get('/dashboard', function () {
 
     $totalMessages = \App\Models\Contact::count();
 
+    $totalAchievements = \App\Models\Achievement::count();
+
     return view('dashboard', compact(
         'totalProjects',
-        'totalMessages'
+        'totalMessages',
+        'totalAchievements'
     ));
 
 })->middleware(['auth', 'verified'])->name('dashboard');
-
 /*
 |--------------------------------------------------------------------------
 | Profile Routes (Laravel Breeze default)
