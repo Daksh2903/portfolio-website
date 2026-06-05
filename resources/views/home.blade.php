@@ -164,6 +164,18 @@
                         Backend development and CRUD applications.
                     </p>
 
+                    <div class="progress mt-3" style="height:8px;">
+
+                        <div class="progress-bar bg-info"
+                            style="width:90%">
+                        </div>
+
+                    </div>
+
+                    <small class="text-info">
+                        90%
+                    </small>
+
                 </div>
 
             </div>
@@ -179,6 +191,18 @@
                     <p class="text-light">
                         Server-side programming and web applications.
                     </p>
+
+                    <div class="progress mt-3" style="height:8px;">
+
+                        <div class="progress-bar bg-info"
+                            style="width:85%">
+                        </div>
+
+                    </div>
+
+                    <small class="text-info">
+                        85%
+                    </small>
 
                 </div>
 
@@ -196,6 +220,18 @@
                         Database design and management.
                     </p>
 
+                    <div class="progress mt-3" style="height:8px;">
+
+                        <div class="progress-bar bg-info"
+                            style="width:80%">
+                        </div>
+
+                    </div>
+
+                    <small class="text-info">
+                        80%
+                    </small>
+
                 </div>
 
             </div>
@@ -211,6 +247,18 @@
                     <p class="text-light">
                         Interactive and dynamic user interfaces.
                     </p>
+
+                    <div class="progress mt-3" style="height:8px;">
+
+                        <div class="progress-bar bg-info"
+                            style="width:75%">
+                        </div>
+
+                    </div>
+
+                    <small class="text-info">
+                        75%
+                    </small>
 
                 </div>
 
@@ -228,6 +276,18 @@
                         Responsive and modern UI design.
                     </p>
 
+                    <div class="progress mt-3" style="height:8px;">
+
+                        <div class="progress-bar bg-info"
+                            style="width:90%">
+                        </div>
+
+                    </div>
+
+                    <small class="text-info">
+                        90%
+                    </small>
+
                 </div>
 
             </div>
@@ -243,6 +303,18 @@
                     <p class="text-light">
                         Version control and collaboration.
                     </p>
+
+                    <div class="progress mt-3" style="height:8px;">
+
+                        <div class="progress-bar bg-info"
+                            style="width:80%">
+                        </div>
+
+                    </div>
+
+                    <small class="text-info">
+                        80%
+                    </small>
 
                 </div>
 
@@ -401,18 +473,43 @@
 
             @foreach($achievements as $achievement)
 
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="col-lg-4 col-md-6 d-flex" data-aos="zoom-in">
 
-                <div class="achievement-card p-5 text-center h-100">
+                <div class="achievement-card p-4 h-100 w-100 d-flex flex-column">
 
-                    <i class="fas fa-trophy achievement-icon mb-4"></i>
+                    @if($achievement->image)
 
-                    <h3 class="text-info mb-4">
-                        
+                    <a href="{{ asset('uploads/achievements/' . $achievement->image) }}"
+                        target="_blank"
+                        title="View Certificate">
+
+                        <img src="{{ asset('uploads/achievements/' . $achievement->image) }}"
+                            class="achievement-image mb-3">
+
+                    </a>
+
+                    @else
+
+                        <div class="text-center mb-3">
+                            <i class="fas fa-trophy achievement-icon"></i>
+                        </div>
+
+                    @endif
+
+                    <h3 class="text-info mb-2">
                         {{ $achievement->title }}
                     </h3>
 
-                    <p class="text-light fs-5 lh-lg">
+                    @if($achievement->achievement_date)
+
+                    <p class="text-info mb-3">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        {{ $achievement->achievement_date }}
+                    </p>
+
+                    @endif
+
+                    <p class="text-light">
 
                         {{ $achievement->description }}
 

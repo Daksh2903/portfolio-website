@@ -93,6 +93,18 @@
 
         }
 
+        .achievement-image{
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+        }
+
     </style>
 
 </head>

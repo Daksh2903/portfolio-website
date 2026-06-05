@@ -30,6 +30,26 @@
                 {{ $achievement->title }}
             </h3>
 
+            @if($achievement->achievement_date)
+
+            <p class="text-info mb-2">
+
+                <i class="fas fa-calendar me-2"></i>
+
+                {{ $achievement->achievement_date }}
+
+            </p>
+
+            @endif
+
+            @if($achievement->image)
+
+           <img src="{{ asset('uploads/achievements/' . $achievement->image) }}"
+                class="img-fluid rounded mb-3 achievement-image"
+                alt="Certificate">
+
+            @endif
+
             <p class="text-white flex-grow-1">
                 {{ $achievement->description }}
             </p>

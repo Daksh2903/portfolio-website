@@ -292,6 +292,26 @@
 
         transition: all 0.4s ease;
 
+        height: 100%;
+
+    }
+
+    .achievement-image{
+
+        width: 100%;
+
+        height: 220px;
+
+        object-fit: cover;
+
+        border-radius: 15px;
+
+    }
+
+    .achievement-card p{
+
+        flex-grow: 1;
+
     }
 
     .achievement-card:hover{
@@ -307,6 +327,20 @@
         font-size: 50px;
 
         color: #38bdf8;
+
+    }
+
+    .progress{
+
+        background: rgba(255,255,255,0.1);
+
+        border-radius: 10px;
+
+    }
+
+    .progress-bar{
+
+        border-radius: 10px;
 
     }
 

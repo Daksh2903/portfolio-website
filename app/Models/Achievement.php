@@ -8,10 +8,9 @@ class Achievement extends Model
 {
 
     protected $fillable = [
-
         'title',
-        'description'
-
+        'description',
+        'achievement_date',
+        'image',
     ];
-
 }

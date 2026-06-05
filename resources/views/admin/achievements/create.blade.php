@@ -9,7 +9,8 @@
 <div class="card glass-about p-5 shadow-lg border-0">
 
     <form action="/admin/achievements/store"
-          method="POST">
+          method="POST"
+          enctype="multipart/form-data">
 
         @csrf
 
@@ -39,6 +40,30 @@
                       rows="5"
                       class="form-control"
                       required></textarea>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label class="form-label">
+                Achievement Date
+            </label>
+
+            <input type="date"
+                name="achievement_date"
+                class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label class="form-label">
+                Certificate Image
+            </label>
+
+            <input type="file"
+                name="image"
+                class="form-control">
 
         </div>
 

@@ -32,6 +32,18 @@ class AchievementController extends Controller
     // Store achievement
     public function store(Request $request)
     {
+        $imageName = null;
+
+        if ($request->hasFile('image')) {
+
+            $imageName = time() . '.' .
+                        $request->image->extension();
+
+            $request->image->move(
+                public_path('uploads/achievements'),
+                $imageName
+            );
+        }
 
         Achievement::create([
 
@@ -39,12 +51,14 @@ class AchievementController extends Controller
 
             'description' => $request->description,
 
+            'achievement_date' => $request->achievement_date,
+
+            'image' => $imageName,
+
         ]);
 
         return redirect('/admin/achievements');
-
     }
-
 
     // Edit achievement
     public function edit($id)
@@ -61,8 +75,20 @@ class AchievementController extends Controller
     // Update achievement
     public function update(Request $request, $id)
     {
-
         $achievement = Achievement::findOrFail($id);
+
+        $imageName = $achievement->image;
+
+        if ($request->hasFile('image')) {
+
+            $imageName = time() . '.' .
+                        $request->image->extension();
+
+            $request->image->move(
+                public_path('uploads/achievements'),
+                $imageName
+            );
+        }
 
         $achievement->update([
 
@@ -70,12 +96,14 @@ class AchievementController extends Controller
 
             'description' => $request->description,
 
+            'achievement_date' => $request->achievement_date,
+
+            'image' => $imageName,
+
         ]);
 
         return redirect('/admin/achievements');
-
     }
-
 
     // Delete achievement
     public function destroy($id)
