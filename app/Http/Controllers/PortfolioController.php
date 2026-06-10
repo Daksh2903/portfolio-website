@@ -6,23 +6,25 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Achievement;
+use App\Models\Profile;
 
 class PortfolioController extends Controller
 {
     public function home()
     {
-
         $projects = Project::latest()->get();
 
         $achievements = Achievement::latest()->get();
 
+        $profile = Profile::first();
+
         return view('home', compact(
             'projects',
-            'achievements'
+            'achievements',
+            'profile'
         ));
-
     }
-    
+      
     public function about()
     {
         return view('about');

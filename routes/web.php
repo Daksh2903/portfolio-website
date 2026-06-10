@@ -5,6 +5,7 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\AdminProfileController;
 
 
 /*
@@ -99,6 +100,14 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/admin/achievements/delete/{id}',
         [AchievementController::class, 'destroy']);
+
+    // Admin Profile Settings
+
+    Route::get('/admin/profile',
+        [AdminProfileController::class, 'edit']);
+
+    Route::put('/admin/profile/update',
+        [AdminProfileController::class, 'update']);
 
 });
 

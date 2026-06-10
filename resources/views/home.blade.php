@@ -16,7 +16,7 @@
                 </h5>
 
                 <h1 class="display-3 fw-bold">
-                    Hi, I'm Daksh Patel
+                    Hi, I'm {{ $profile->name }}
                 </h1>
 
                 <h2 class="text-info mb-4">
@@ -24,8 +24,7 @@
                 </h2>
 
                 <p class="lead text-light">
-                    Passionate about building modern web applications
-                    using Laravel, PHP, MySQL, and JavaScript.
+                    {{ $profile->about }}
                 </p>
 
                 <div class="row mt-4 g-3 hero-stats">
@@ -80,11 +79,17 @@
                         View Projects
                     </a>
 
-                    <a href="{{ asset('resume/VAC2.pdf') }}"
-                       class="btn btn-outline-light btn-lg"
-                       download>
-                       Download Resume
+                    @if($profile->resume)
+
+                    <a href="{{ asset('uploads/resume/' . $profile->resume) }}"
+                    class="btn btn-outline-light btn-lg"
+                    download>
+
+                        Download Resume
+
                     </a>
+
+                    @endif
 
                 </div>
 
@@ -94,10 +99,12 @@
             <!-- Right Side -->
             <div class="col-md-6 text-center order-1 order-md-2" data-aos="fade-left">
 
-                <img src="{{ asset('Images/Profile.jpeg') }}"
-                     alt="Profile"
-                     class="img-fluid rounded-circle shadow-lg profile-image"
-                     width="350">
+                <img src="{{ $profile->image
+                        ? asset('uploads/profile/' . $profile->image)
+                        : asset('Images/Profile.jpeg') }}"
+                    alt="Profile"
+                    class="img-fluid rounded-circle shadow-lg profile-image"
+                    width="350">
 
             </div>
 

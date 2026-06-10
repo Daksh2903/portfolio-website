@@ -401,6 +401,18 @@
         .card{
             padding: 0.75rem !important;
         }
+
+        .achievement-image{
+            height: 180px;
+        }
+
+        .achievement-card h3{
+            font-size: 1.5rem;
+        }
+
+        .timeline-item{
+            margin-bottom: 25px;
+        }
     }
 
     </style>
