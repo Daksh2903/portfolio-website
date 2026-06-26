@@ -12,5 +12,6 @@ class Profile extends Model
         'about',
         'image',
         'resume',
+        'typing_roles',
     ];
 }

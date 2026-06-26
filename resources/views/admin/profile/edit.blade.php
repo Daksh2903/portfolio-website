@@ -44,6 +44,24 @@
         <div class="mb-4">
 
             <label class="form-label text-light">
+                Typing Animation Roles
+            </label>
+
+            <textarea
+                name="typing_roles"
+                class="form-control"
+                rows="5"
+                placeholder="One role per line">{{ $profile->typing_roles }}</textarea>
+
+            <small class="text-secondary">
+                Enter one role per line. These will be shown in the homepage typing animation.
+            </small>
+
+        </div>
+
+        <div class="mb-4">
+
+            <label class="form-label text-light">
                 About Me
             </label>
 

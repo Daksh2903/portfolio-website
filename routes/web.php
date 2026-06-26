@@ -49,10 +49,26 @@ Route::get('/dashboard', function () {
 
     $totalAchievements = \App\Models\Achievement::count();
 
+    $latestProject = \App\Models\Project::latest()->first();
+
+    $latestAchievement = \App\Models\Achievement::latest()->first();
+
+    $latestMessage = \App\Models\Contact::latest()->first();
+
     return view('dashboard', compact(
+
         'totalProjects',
+
         'totalMessages',
-        'totalAchievements'
+
+        'totalAchievements',
+
+        'latestProject',
+
+        'latestAchievement',
+
+        'latestMessage'
+
     ));
 
 })->middleware(['auth', 'verified'])->name('dashboard');

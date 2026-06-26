@@ -49,6 +49,8 @@ class AdminProfileController extends Controller
 
             'title' => $request->title,
 
+            'typing_roles' => $request->typing_roles,
+
             'about' => $request->about,
 
             'image' => $imageName,

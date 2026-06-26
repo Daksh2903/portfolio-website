@@ -608,10 +608,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var typed = new Typed("#typing", {
 
         strings: [
-            "Laravel Developer",
-            "Full Stack Developer",
-            "Backend Developer",
-            "PHP Developer"
+
+            @foreach(explode("\n", $profile->typing_roles) as $role)
+
+                "{{ trim($role) }}",
+
+            @endforeach
+
         ],
 
         typeSpeed: 60,
