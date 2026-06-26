@@ -105,6 +105,40 @@
 
         }
 
+        .dashboard-card{
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: all .35s ease;
+
+        }
+
+        .dashboard-card:hover{
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 15px 35px rgba(56,189,248,.25);
+
+        }
+
+        .dashboard-icon{
+
+            position: absolute;
+
+            right: 25px;
+
+            top: 20px;
+
+            font-size: 45px;
+
+            opacity: .15;
+
+            color: #38bdf8;
+
+        }
+
     </style>
 
 </head>

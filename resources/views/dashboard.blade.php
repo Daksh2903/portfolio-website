@@ -13,8 +13,9 @@
 
         <div class="card glass-about p-5 shadow-lg border-0">
 
+            <i class="fas fa-folder dashboard-icon"></i>
+
             <h5 class="text-secondary mb-3">
-                <i class="fas fa-folder me-2"></i>
                 Total Projects
             </h5>
 
@@ -32,8 +33,9 @@
 
         <div class="card glass-about p-5 shadow-lg border-0">
 
+            <i class="fas fa-envelope dashboard-icon"></i>
+
             <h5 class="text-secondary mb-3">
-                <i class="fas fa-envelope me-2"></i>
                 Total Messages
             </h5>
 
@@ -52,8 +54,9 @@
 
         <div class="card glass-about p-5 shadow-lg border-0">
 
+            <i class="fas fa-trophy dashboard-icon"></i>
+
             <h5 class="text-secondary mb-3">
-                <i class="fas fa-trophy me-2"></i>
                 Total Achievements
             </h5>
 
@@ -125,7 +128,7 @@
 
 </div>
 
-<div class="card glass-about p-4 mt-5">
+<div class="card glass-about dashboard-card p-5 shadow-lg border-0">
 
     <h3 class="text-info mb-4">
         Portfolio Statistics
@@ -192,9 +195,67 @@
 
 </div>
 
+<div class="card glass-about p-4 mt-5">
+
+    <h3 class="text-info mb-4">
+        Admin Profile
+    </h3>
+
+    <div class="text-center">
+
+        @if($profile->image)
+
+            <img src="{{ asset('uploads/profile/' . $profile->image) }}"
+                 class="rounded-circle shadow mb-3"
+                 width="140"
+                 height="140"
+                 style="object-fit:cover;">
+
+        @endif
+
+        <h3 class="text-info">
+
+            {{ $profile->name }}
+
+        </h3>
+
+        <p class="text-light">
+
+            {{ $profile->title }}
+
+        </p>
+
+        <h5 class="mt-4 text-info">
+
+            Profile Completion
+
+        </h5>
+
+        <div class="progress mb-3" style="height:25px;">
+
+            <div class="progress-bar bg-success"
+
+                role="progressbar"
+
+                style="width: {{ $profileCompletion }}%;">
+
+                {{ $profileCompletion }}%
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
 <script>
+
+Chart.register(ChartDataLabels);
 
 const ctx = document.getElementById('dashboardChart');
 
@@ -249,6 +310,24 @@ new Chart(ctx, {
             legend: {
 
                 display: false
+
+            },
+
+            datalabels: {
+
+                anchor: 'end',
+
+                align: 'top',
+
+                color: '#ffffff',
+
+                font: {
+
+                    weight: 'bold',
+
+                    size: 14
+
+                }
 
             }
 
@@ -340,23 +419,39 @@ new Chart(statsCtx, {
 
         responsive: true,
 
-        plugins: {
+    plugins: {
 
-            legend: {
+        legend: {
 
-                position: 'bottom',
+            position: 'bottom',
 
-                labels: {
+            labels: {
 
-                    color: '#ffffff',
-                    padding: 20
+                color: '#ffffff',
 
-                }
+                padding: 20
 
             }
 
+        },
+
+        datalabels: {
+
+            color: '#ffffff',
+
+            font: {
+
+                weight: 'bold',
+
+                size: 16
+
+            },
+
+            formatter: (value) => value
+
         }
 
+    }
     }
 
 });

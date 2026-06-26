@@ -55,6 +55,19 @@ Route::get('/dashboard', function () {
 
     $latestMessage = \App\Models\Contact::latest()->first();
 
+    $profile = \App\Models\Profile::first();
+
+    $completedFields = 0;
+
+    if (!empty($profile->name)) $completedFields++;
+    if (!empty($profile->title)) $completedFields++;
+    if (!empty($profile->about)) $completedFields++;
+    if (!empty($profile->image)) $completedFields++;
+    if (!empty($profile->resume)) $completedFields++;
+    if (!empty($profile->typing_roles)) $completedFields++;
+
+    $profileCompletion = ($completedFields / 6) * 100;
+
     return view('dashboard', compact(
 
         'totalProjects',
@@ -67,7 +80,11 @@ Route::get('/dashboard', function () {
 
         'latestAchievement',
 
-        'latestMessage'
+        'latestMessage',
+
+        'profile',
+
+        'profileCompletion',
 
     ));
 
